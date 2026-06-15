@@ -27,9 +27,6 @@ typedef struct {
     const uint32_t upper;
 } freq_band_table_t;
 
-extern const freq_band_table_t BX4819_band1;
-extern const freq_band_table_t BX4819_band2;
-
 typedef enum  {
     BAND_NONE = -1,
     BAND1_50MHz = 0,

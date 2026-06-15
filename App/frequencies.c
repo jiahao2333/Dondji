@@ -24,9 +24,6 @@
 #define BX4819_band1_lower 1800000
 #define BX4819_band2_upper 130000000
 
-const freq_band_table_t BX4819_band1 = {BX4819_band1_lower,  63000000};
-const freq_band_table_t BX4819_band2 = {84000000, BX4819_band2_upper};
-
 const freq_band_table_t frequencyBandTable[] =
 {
     #ifndef ENABLE_WIDE_RX
@@ -278,9 +275,6 @@ int32_t RX_freq_check(const uint32_t Frequency)
 
     if (Frequency < frequencyBandTable[0].lower || Frequency > frequencyBandTable[BAND_N_ELEM - 1].upper)
         return -1;  // not allowed outside this range
-
-    if (Frequency >= BX4819_band1.upper && Frequency < BX4819_band2.lower)
-        return -1;  // BX chip does not work in this range
 
     return 0;  // OK frequency
 }
