@@ -220,7 +220,9 @@ endif()
 
 enable_feature(ENABLE_FEAT_F4HWN)
 enable_feature(ENABLE_FEAT_F4HWN_GAME
-    app/breakout.c
+    app/mokuyu.c
+    app/toolbox_menu.c
+    app/cw.c
 )
 enable_feature(ENABLE_FEAT_F4HWN_SCREENSHOT 
     screenshot.c
